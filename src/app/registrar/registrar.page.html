@@ -5,6 +5,12 @@
 </ion-header>
 
 <ion-content>
-  <p>Página de Registro</p>
-  <img src=".\assets\elfa.jpg">
+  <form>
+    <ion-item>
+      <ion-label>Selecionar Imagem: </ion-label>
+      <input id = "imageFile" name="imageFile" type="file" accept="image/png, image/jpg, image/jpeg">
+    </ion-item>
+    <ion-button (click)="registrar()">Registrar</ion-button>
+  </form>
+
 </ion-content>

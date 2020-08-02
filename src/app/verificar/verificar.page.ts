@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ImagemService } from 'src/services/domain/imagem.service';
 
 @Component({
   selector: 'app-verificar',
@@ -7,7 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VerificarPage implements OnInit {
 
-  constructor() { }
+  public imagemId : string = "";
+
+  constructor(public imagemService:ImagemService) { }
+
+  pesquisar(){
+    this.imagemService.findAcessos(this.imagemId).subscribe(this.showInScreen,this.errorInScreen);
+  }
+
+  showInScreen(response){
+    window.alert("Número de acessos:"+response.numAcessos);
+  }
+
+  errorInScreen(response){
+    window.alert("Imagem não encontrada")
+  }
 
   ngOnInit() {
   }

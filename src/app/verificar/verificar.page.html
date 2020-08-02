@@ -5,5 +5,13 @@
 </ion-header>
 
 <ion-content>
-  <p>Página de Verificação</p>
+
+  <form>
+    <ion-item>
+      <ion-label>Chave de Acesso: </ion-label>
+      <ion-input [(ngModel)]="imagemId" name="id" type="text"></ion-input>
+    </ion-item>
+    <ion-button (click)="pesquisar()">Pesquisar</ion-button>
+  </form>
+
 </ion-content>

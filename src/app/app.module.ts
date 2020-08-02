@@ -19,7 +19,7 @@ import { ImagemService } from 'src/services/domain/imagem.service';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [
     StatusBar,
